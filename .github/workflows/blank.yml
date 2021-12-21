@@ -13,14 +13,16 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '17'
-      - name: Download file
-        run: wget https://api.purpurmc.org/v2/purpur/1.18.1/1446/download -O ./purpur.jar
-      - name: Download eula
-        run: wget https://github.com/FlyProj/GithubDisk/raw/main/eula.txt
+      #- name: Download file
+      #  run: wget https://api.purpurmc.org/v2/purpur/1.18.1/1446/download -O ./purpur.jar
+      - name: Download Ubuntu
+        run: wget https://releases.ubuntu.com/21.10/ubuntu-21.10-desktop-amd64.iso
+      #- name: Download eula
+      #  run: wget https://github.com/FlyProj/GithubDisk/raw/main/eula.txt
       - name: get This IP
         run: curl https://www.taobao.com/help/getip.php
-      - name: Run Minecraft
-        run: java -jar -Xms4g -Xmx15g purpur.jar -nogui
+      #- name: Run Minecraft
+      #  run: java -jar -Xms4g -Xmx15g purpur.jar -nogui
       - name: upload file
         uses: actions/upload-artifact@v2
         with:
