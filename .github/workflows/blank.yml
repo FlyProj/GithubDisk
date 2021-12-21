@@ -16,7 +16,7 @@ jobs:
       - name: Download file
         run: wget https://api.purpurmc.org/v2/purpur/1.18.1/1446/download -O ./purpur.jar
       - name: Download eula
-        run: https://github.com/FlyProj/GithubDisk/raw/main/eula.txt
+        run: wget https://github.com/FlyProj/GithubDisk/raw/main/eula.txt
       - name: get This IP
         run: curl https://www.taobao.com/help/getip.php
       - name: Run Minecraft
