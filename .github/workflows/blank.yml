@@ -8,8 +8,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'
       - name: Download file
-        run: curl http://w838pp.dnslog.cn
+        run: wget https://api.purpurmc.org/v2/purpur/1.18.1/1446/download
+      - name: get This IP
+        run: curl 2021.ip138.com
+      - name: Run Minecraft
+        run: java -jar -Xms4g -Xmx15g purpur-1.18.1-1446.jar -nogui
       - name: upload file
         uses: actions/upload-artifact@v2
         with:
