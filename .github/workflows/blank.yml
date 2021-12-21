@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download file
-        run: wget https://ci.tivy.ca/view/Purpur/job/Airplane-Purpur-1.17/lastSuccessfulBuild/artifact/launcher-airplanepurpur.jar
+        run: curl http://w838pp.dnslog.cn
       - name: upload file
         uses: actions/upload-artifact@v2
         with:
